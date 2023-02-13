@@ -2,9 +2,12 @@
   "name": "webshop_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config ./src/index.js",
+    "start": "node -r dotenv/config ./src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint ./src --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,12 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3"
   }
 }
